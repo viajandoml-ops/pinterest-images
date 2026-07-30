@@ -131,6 +131,15 @@
   .testi-photo .grid-collage img{width:100%;height:100%;object-fit:cover;border-radius:6px;}
   .cell-main{grid-column:2/5;grid-row:1/6;border-radius:14px;}
 
+  /* YOUTUBE BANNER */
+  .yt-section{text-align:center;margin-bottom:60px;}
+  .yt-section h2{font-size:22px;margin-bottom:8px;}
+  .yt-section p.yt-sub{font-size:12px;color:var(--text-muted);margin-bottom:20px;}
+  .yt-banner-frame{
+    border-radius:20px;overflow:hidden;box-shadow:0 16px 34px rgba(20,20,30,.12);
+  }
+  .yt-banner-frame img{width:100%;display:block;}
+
   @media(max-width:600px){
     .about-section{grid-template-columns:1fr;}
     .photo-stack{margin-bottom:10px;}
@@ -223,6 +232,16 @@
   <section class="dest-section">
     <div class="dest-grid" id="destGrid"></div>
     <div class="view-more-wrap"><button class="btn-orange">View More</button></div>
+  </section>
+
+  <!-- YOUTUBE CHANNEL -->
+  <section class="yt-section">
+    <span class="eyebrow" style="justify-content:center;">Our Channel</span>
+    <h2>Follow Our Journey on YouTube</h2>
+    <p class="yt-sub">Real trips, real tips — subscribe for new destinations every week.</p>
+    <div class="yt-banner-frame">
+      <img src="viajando-al-mundo-banner.png" alt="Viajando al Mundo - YouTube Channel">
+    </div>
   </section>
 
   <!-- TESTIMONIAL -->
