@@ -23,7 +23,7 @@ const productsData = [
   // ---------- GRECIA (placeholders - reemplazar con datos reales) ----------
   {
     country: 'Grecia',
-    title: 'Esencial — Los imperdibles, zona por zona (Guía gratis)',
+    title: 'Esencial — Los imperdibles, zona por zona',
     price: 'Gratis',
     link: 'https://viajandoalmundo.gumroad.com/l/grecia',
     img: 'products_images/Grecia-Gratis_COVER.png'
@@ -53,7 +53,7 @@ const productsData = [
   // ---------- JAPÓN (placeholders - reemplazar con datos reales) ----------
   {
     country: 'Japón',
-    title: 'Esencial — Los imperdibles, zona por zona (Guía gratis)',
+    title: 'Esencial — Los imperdibles, zona por zona',
     price: 'Gratis',
     link: 'https://viajandoalmundo.gumroad.com/l/japon?layout=profile',
     img: 'products_images/Japon-Gratis_COVER.png'
