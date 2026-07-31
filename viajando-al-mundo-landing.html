@@ -41,36 +41,37 @@
     padding:12px 24px;font-size:12.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;
   }
 
-  /* HEADER */
-  header{padding:24px 0;border-bottom:1px solid var(--border);}
+  /* HEADER - flotante sobre el banner */
+  header{position:absolute;top:0;left:0;right:0;z-index:20;padding:26px 0;}
   .header-inner{display:flex;align-items:center;justify-content:space-between;}
-  .logo{font-weight:800;font-size:16px;letter-spacing:.3px;}
+  .logo img{height:30px;width:auto;display:block;}
   nav ul{display:flex;gap:30px;}
-  nav a{font-size:13px;font-weight:600;color:var(--dark);}
+  nav a{font-size:13px;font-weight:700;color:var(--dark);}
   nav a:hover{color:var(--orange);}
 
-  /* HERO */
-  .hero{padding:70px 0 40px;}
-  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
-  .hero-eyebrow{color:var(--orange);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;display:block;}
-  .hero-text h1{font-size:44px;margin-bottom:16px;}
-  .hero-text p{font-size:14px;color:var(--text-muted);line-height:1.8;margin-bottom:28px;max-width:440px;}
-  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;}
-  .hero-photo{position:relative;height:380px;}
-  .hero-photo img{position:absolute;border-radius:22px;object-fit:cover;box-shadow:0 20px 40px rgba(0,0,0,.15);}
-  .hp-1{width:280px;height:340px;top:0;left:20px;}
-  .hp-2{width:200px;height:160px;bottom:0;right:0;border:6px solid #fff;}
-
-  /* BANNER SECTION - prominent, right after hero */
-  .banner-section{padding:20px 0 70px;text-align:center;}
-  .banner-frame{
-    max-width:1080px;margin:0 auto;border-radius:26px;overflow:hidden;
-    box-shadow:0 24px 60px rgba(20,20,30,.18);
+  /* HERO = BANNER DE FONDO */
+  .hero-banner{
+    position:relative;
+    min-height:560px;
+    background:url('viajando-al-mundo-banner.png') center 30%/cover no-repeat;
   }
-  .banner-frame img{width:100%;display:block;}
+
+  /* FRANJA DE BIENVENIDA - avatar + saludo + CTAs */
+  .welcome-strip{
+    background:#fff;border-bottom:1px solid var(--border);
+    padding:30px 0;
+  }
+  .welcome-inner{
+    display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;text-align:left;
+  }
+  .welcome-avatar{width:64px;height:64px;border-radius:50%;flex-shrink:0;object-fit:cover;}
+  .welcome-text{max-width:320px;}
+  .welcome-text .hola{font-size:14px;font-weight:800;margin-bottom:2px;}
+  .welcome-text p{font-size:12px;color:var(--text-muted);line-height:1.5;}
+  .hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;}
 
   /* STATS */
-  .stats-section{padding:0 0 70px;}
+  .stats-section{padding:50px 0 70px;}
   .stats-row{display:flex;gap:16px;max-width:820px;margin:0 auto;}
   .stat-box{background:var(--gray-bg);border-radius:16px;padding:24px 14px;text-align:center;flex:1;}
   .stat-box .num{font-size:26px;font-weight:800;color:var(--dark);}
@@ -178,15 +179,16 @@
   /* FOOTER */
   footer{background:var(--dark);color:#c7ccd3;padding:44px 0 24px;margin-top:10px;}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
-  .footer-logo{font-weight:800;font-size:15px;color:#fff;letter-spacing:.3px;}
+  .footer-logo img{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95;}
   .footer-links{display:flex;gap:20px;}
   .footer-links a{font-size:12px;color:#c7ccd3;}
   .footer-bottom{text-align:center;font-size:11px;opacity:.6;margin-top:26px;}
 
   @media(max-width:980px){
     nav{display:none;}
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-photo{margin-top:20px;}
+    .hero-banner{min-height:380px;background-position:center 20%;}
+    .welcome-inner{flex-direction:column;text-align:center;}
+    .welcome-text{max-width:100%;}
     .stats-row{flex-wrap:wrap;}
     .videos-grid, .products-grid{grid-template-columns:1fr;}
     .social-grid{grid-template-columns:repeat(2,1fr);}
@@ -195,10 +197,10 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER - flotante sobre el banner -->
 <header>
   <div class="container header-inner">
-    <div class="logo">Viajando al Mundo</div>
+    <a class="logo" href="#"><img src="assets/logo-wordmark.png" alt="Viajando al Mundo"></a>
     <nav>
       <ul>
         <li><a href="#videos">Videos</a></li>
@@ -210,33 +212,23 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="hero-eyebrow">Luz &amp; Marcos · Canal de viajes</span>
-      <h1>Descubrí, Explorá, Viví el Mundo</h1>
-      <p>Recorremos el mundo y convertimos cada viaje en videos y guías reales. 56 videos, 8 países y muchas más aventuras en camino.</p>
-      <div class="hero-cta-row">
-        <a class="btn-orange" href="https://www.youtube.com/@viajandoalmundo" target="_blank">Ver Canal</a>
-        <a class="btn-outline-dark" href="#videos">Ver Videos</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img class="hp-1" src="https://img.youtube.com/vi/EJTJ258bvw4/hqdefault.jpg" alt="Atenas, Grecia">
-      <img class="hp-2" src="https://img.youtube.com/vi/SCF0XKn8QMY/hqdefault.jpg" alt="Tokio, Japón">
-    </div>
-  </div>
-</section>
+<!-- HERO = BANNER DEL CANAL COMO FONDO -->
+<section class="hero-banner"></section>
 
-<!-- BANNER - PROMINENT, RIGHT AFTER HERO -->
-<section class="banner-section">
-  <div class="container">
-    <div class="banner-frame">
-      <img src="viajando-al-mundo-banner.png" alt="Viajando al Mundo">
+<!-- FRANJA DE BIENVENIDA: avatar real + saludo + CTAs -->
+<div class="welcome-strip">
+  <div class="container welcome-inner">
+    <img class="welcome-avatar" src="assets/avatar-round.png" alt="Luz y Marcos - Viajando al Mundo">
+    <div class="welcome-text">
+      <div class="hola">¡Hola! Somos Luz &amp; Marcos 👋</div>
+      <p>Viajamos por el mundo y lo compartimos en videos, guías y fotos reales.</p>
+    </div>
+    <div class="hero-cta-row">
+      <a class="btn-orange" href="https://www.youtube.com/@viajandoalmundo" target="_blank">▶ Suscribite en YouTube</a>
+      <a class="btn-outline-dark" href="#videos">Ver Videos ↓</a>
     </div>
   </div>
-</section>
+</div>
 
 <!-- STATS -->
 <section class="stats-section">
@@ -297,7 +289,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Viajando al Mundo</div>
+      <div class="footer-logo"><img src="assets/logo-lockup.png" alt="Viajando al Mundo"></div>
       <div class="footer-links">
         <a href="#videos">Videos</a>
         <a href="#productos">Productos</a>
