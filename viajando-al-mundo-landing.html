@@ -6,6 +6,7 @@
 <title>Viajando al Mundo | Traver Style</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   :root{
     --orange:#f2762e;
@@ -44,10 +45,20 @@
   /* HEADER - flotante sobre el banner */
   header{position:absolute;top:0;left:0;right:0;z-index:20;padding:26px 0;}
   .header-inner{display:flex;align-items:center;justify-content:space-between;}
-  .logo img{height:30px;width:auto;display:block;}
-  nav ul{display:flex;gap:30px;}
-  nav a{font-size:13px;font-weight:700;color:var(--dark);}
-  nav a:hover{color:var(--orange);}
+  .logo{
+    font-weight:800;font-size:17px;letter-spacing:.2px;color:var(--dark);
+    background:rgba(255,255,255,.85);backdrop-filter:blur(6px);
+    padding:9px 18px;border-radius:24px;box-shadow:0 4px 16px rgba(20,20,30,.1);
+  }
+  nav ul{
+    display:flex;gap:6px;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);
+    padding:6px;border-radius:26px;box-shadow:0 4px 16px rgba(20,20,30,.1);
+  }
+  nav a{
+    font-size:13px;font-weight:700;color:var(--dark);padding:9px 18px;border-radius:20px;
+    transition:background .2s, color .2s;display:inline-block;
+  }
+  nav a:hover{background:var(--orange);color:#fff;}
 
   /* HERO = BANNER DE FONDO */
   .hero-banner{
@@ -172,14 +183,14 @@
     box-shadow:0 6px 16px rgba(20,20,30,.04);
   }
   .social-card:hover{transform:translateY(-4px);border-color:var(--orange);}
-  .social-card .s-icon{font-size:22px;margin-bottom:8px;display:block;}
+  .social-card .s-icon{font-size:24px;margin-bottom:10px;display:block;}
   .social-card .s-name{font-size:12px;font-weight:700;margin-bottom:2px;}
   .social-card .s-handle{font-size:10px;color:var(--text-muted);}
 
   /* FOOTER */
   footer{background:var(--dark);color:#c7ccd3;padding:44px 0 24px;margin-top:10px;}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
-  .footer-logo img{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95;}
+  .footer-logo img{height:34px;width:auto;opacity:.95;}
   .footer-links{display:flex;gap:20px;}
   .footer-links a{font-size:12px;color:#c7ccd3;}
   .footer-bottom{text-align:center;font-size:11px;opacity:.6;margin-top:26px;}
@@ -200,7 +211,7 @@
 <!-- HEADER - flotante sobre el banner -->
 <header>
   <div class="container header-inner">
-    <a class="logo" href="#"><img src="assets/logo-wordmark.png" alt="Viajando al Mundo"></a>
+    <a class="logo" href="#">Viajando al Mundo</a>
     <nav>
       <ul>
         <li><a href="#videos">Videos</a></li>
@@ -208,7 +219,6 @@
         <li><a href="#redes">Redes</a></li>
       </ul>
     </nav>
-    <a class="btn-red-yt" href="https://www.youtube.com/@viajandoalmundo" target="_blank">▶ Suscribite</a>
   </div>
 </header>
 
@@ -226,6 +236,7 @@
     <div class="hero-cta-row">
       <a class="btn-orange" href="https://www.youtube.com/@viajandoalmundo" target="_blank">▶ Suscribite en YouTube</a>
       <a class="btn-outline-dark" href="#videos">Ver Videos ↓</a>
+      <a class="btn-outline-dark" href="#productos">Ver Productos ↓</a>
     </div>
   </div>
 </div>
@@ -234,9 +245,9 @@
 <section class="stats-section">
   <div class="container">
     <div class="stats-row">
-      <div class="stat-box"><div class="num">56</div><div class="label">Videos Publicados</div></div>
-      <div class="stat-box"><div class="num">8</div><div class="label">Países Recorridos</div></div>
-      <div class="stat-box"><div class="num">7</div><div class="label">Redes Conectadas</div></div>
+      <div class="stat-box"><div class="num" id="statVideos">–</div><div class="label">Videos Publicados</div></div>
+      <div class="stat-box"><div class="num" id="statPaises">–</div><div class="label">Países Recorridos</div></div>
+      <div class="stat-box"><div class="num" id="statRedes">–</div><div class="label">Redes Conectadas</div></div>
     </div>
   </div>
 </section>
@@ -247,7 +258,7 @@
     <div class="section-head">
       <span class="eyebrow">Nuestro Contenido</span>
       <h2>Videos por Destino</h2>
-      <p>56 videos y contando. Elegí un país y descubrí cómo lo vivimos nosotros.</p>
+      <p id="videoIntroText">Elegí un país y descubrí cómo lo vivimos nosotros.</p>
     </div>
     <div class="video-tabs" id="videoTabs"></div>
     <div class="videos-grid" id="videosGrid"></div>
@@ -266,7 +277,6 @@
       <p>Guías de viaje descargables, hechas con lo que aprendimos en el camino.</p>
     </div>
     <div class="products-grid" id="productsGrid"></div>
-    <p class="gumroad-note">⚠️ Estos son productos de ejemplo. Pasame el nombre, precio y link de cada uno de tus 9 productos (4 de Grecia, 5 de Japón) y los reemplazo por los reales.</p>
     <div class="videos-footer-cta">
       <a class="btn-orange" href="https://gumroad.com/viajandoalmundo" target="_blank">Ver toda la tienda en Gumroad</a>
     </div>
@@ -289,7 +299,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo"><img src="assets/logo-lockup.png" alt="Viajando al Mundo"></div>
+      <div class="footer-logo"><img src="assets/logo-lockup-white.png" alt="Viajando al Mundo"></div>
       <div class="footer-links">
         <a href="#videos">Videos</a>
         <a href="#productos">Productos</a>
@@ -301,12 +311,37 @@
 </footer>
 
 <!-- ARCHIVOS DE DATOS EDITABLES: modificá el contenido de la carpeta /data
-     para actualizar videos, productos y redes sin tocar el diseño -->
+     para actualizar videos, productos, redes y estadísticas sin tocar el diseño -->
 <script src="data/videos-data.js"></script>
 <script src="data/products-data.js"></script>
 <script src="data/social-data.js"></script>
 
 <script>
+// CONFIGURACIÓN GENERAL (stats, textos) - se carga desde data/site-config.json
+// IMPORTANTE: fetch() de un archivo local solo funciona si la página está
+// alojada en un servidor (hosting, GitHub Pages, Netlify, etc). Si abrís el
+// HTML directamente haciendo doble clic (file://), el navegador bloquea esta
+// lectura por seguridad y se usan los valores de respaldo de acá abajo.
+const FALLBACK_CONFIG = {
+  videosPublicados: 56,
+  paisesRecorridos: 8,
+  redesConectadas: 7,
+  textoIntroVideos: "{videos} videos y contando. Elegí un país y descubrí cómo lo vivimos nosotros."
+};
+
+function aplicarConfig(cfg){
+  document.getElementById('statVideos').textContent = cfg.videosPublicados;
+  document.getElementById('statPaises').textContent = cfg.paisesRecorridos;
+  document.getElementById('statRedes').textContent = cfg.redesConectadas;
+  document.getElementById('videoIntroText').textContent =
+    cfg.textoIntroVideos.replace('{videos}', cfg.videosPublicados);
+}
+
+fetch('data/site-config.json')
+  .then(res => res.json())
+  .then(cfg => aplicarConfig(cfg))
+  .catch(() => aplicarConfig(FALLBACK_CONFIG));
+
 const tabsEl = document.getElementById('videoTabs');
 const gridEl = document.getElementById('videosGrid');
 const countryKeys = Object.keys(videosData);
@@ -394,7 +429,7 @@ const socialGrid = document.getElementById('socialGrid');
 socialData.forEach(s=>{
   socialGrid.innerHTML += `
     <a class="social-card" href="${s.link}" target="_blank">
-      <span class="s-icon">${s.icon}</span>
+      <i class="s-icon ${s.icon}" style="color:${s.color}"></i>
       <div class="s-name">${s.name}</div>
       <div class="s-handle">${s.handle}</div>
     </a>`;

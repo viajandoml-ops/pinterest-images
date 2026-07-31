@@ -1,0 +1,10 @@
+{
+  "_comentario": "Editá los números de acá para actualizar las estadísticas que se muestran en la página (franja de stats y el texto de la sección de Videos). No hace falta tocar el HTML.",
+
+  "videosPublicados": 56,
+  "paisesRecorridos": 8,
+  "redesConectadas": 7,
+
+  "_comentario_textos": "Estos textos usan {videos} como marcador, que se reemplaza automáticamente por el número de videosPublicados de arriba.",
+  "textoIntroVideos": "{videos} videos y contando. Elegí un país y descubrí cómo lo vivimos nosotros."
+}
