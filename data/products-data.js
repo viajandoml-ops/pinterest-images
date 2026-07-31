@@ -23,68 +23,68 @@ const productsData = [
   // ---------- GRECIA (placeholders - reemplazar con datos reales) ----------
   {
     country: 'Grecia',
-    title: 'Guía de Viaje: Grecia Vol. 1',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=500&auto=format&fit=crop'
+    title: 'Esencial — Los imperdibles, zona por zona (Guía gratis)',
+    price: 'Gratis',
+    link: 'https://viajandoalmundo.gumroad.com/l/grecia',
+    img: 'products_images/Grecia-Gratis_COVER.png'
   },
   {
     country: 'Grecia',
-    title: 'Guía de Viaje: Grecia Vol. 2',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?q=80&w=500&auto=format&fit=crop'
+    title: 'Santorini + Mykonos (mapa + guía)',
+    price: '$9',
+    link: 'https://viajandoalmundo.gumroad.com/l/grecia-islas',
+    img: 'products_images/Grecia-Islas_COVER.png'
   },
   {
     country: 'Grecia',
-    title: 'Guía de Viaje: Grecia Vol. 3',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1602088113235-229c19758e9d?q=80&w=500&auto=format&fit=crop'
+    title: 'De Atenas a las Cícladas (mapa + guía)',
+    price: '$15',
+    link: 'https://viajandoalmundo.gumroad.com/l/grecia-completo',
+    img: 'products_images/Grecia-Completo_COVER.png'
   },
   {
     country: 'Grecia',
-    title: 'Guía de Viaje: Grecia Vol. 4',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?q=80&w=500&auto=format&fit=crop'
+    title: 'Pack Total — el viaje entero resuelto',
+    price: '$25',
+    link: 'https://viajandoalmundo.gumroad.com/l/grecia-total',
+    img: 'products_images/Grecia-PackTotal_COVER.png'
   },
 
   // ---------- JAPÓN (placeholders - reemplazar con datos reales) ----------
   {
     country: 'Japón',
-    title: 'Guía de Viaje: Japón Vol. 1',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=500&auto=format&fit=crop'
+    title: 'Esencial — Los imperdibles, zona por zona (Guía gratis)',
+    price: 'Gratis',
+    link: 'https://viajandoalmundo.gumroad.com/l/japon?layout=profile',
+    img: 'products_images/Japon-Gratis_COVER.png'
   },
   {
     country: 'Japón',
-    title: 'Guía de Viaje: Japón Vol. 2',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=500&auto=format&fit=crop'
+    title: 'Tokio y sus escapadas (mapa + guía)',
+    price: '$12',
+    link: 'https://viajandoalmundo.gumroad.com/l/japon-tokio?layout=profile',
+    img: 'products_images/Tokio_COVER.png'
   },
   {
     country: 'Japón',
-    title: 'Guía de Viaje: Japón Vol. 3',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=500&auto=format&fit=crop'
+    title: 'Kioto, Osaka y el oeste (mapa + guía)',
+    price: '$12',
+    link: 'https://viajandoalmundo.gumroad.com/l/japon-kioto?layout=profile',
+    img: 'products_images/Kioto_COVER.png'
   },
   {
     country: 'Japón',
-    title: 'Guía de Viaje: Japón Vol. 4',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=500&auto=format&fit=crop'
+    title: 'De Tokio a Hiroshima (mapa + guía)',
+    price: '$19',
+    link: 'https://viajandoalmundo.gumroad.com/l/japon-completo?layout=profile',
+    img: 'products_images/JaponCompleto_COVER.png'
   },
   {
     country: 'Japón',
-    title: 'Guía de Viaje: Japón Vol. 5',
-    price: 'Ver precio en Gumroad',
-    link: 'https://gumroad.com/viajandoalmundo',
-    img: 'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=500&auto=format&fit=crop'
+    title: 'Pack Total — el viaje entero resuelto',
+    price: '$29',
+    link: 'https://viajandoalmundo.gumroad.com/l/japon-total?layout=profile',
+    img: 'products_images/JaponTotal_COVER.png'
   },
 
 ];
